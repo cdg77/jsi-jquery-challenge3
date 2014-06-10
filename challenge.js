@@ -1,5 +1,21 @@
 $( document ).ready(function() {
 
+  var emailEntry = $('input[name="email"]');
+
+  emailEntry.focus(function() {
+    $(this).after("<p>You appear to be entering your e-mail address</p>");
+  });
+
+  emailEntry.keypress(function () {
+    console.log(emailEntry.val());
+    if (emailEntry.val().indexOf('@') === -1) {
+      emailEntry.next("p").replaceWith("<p>Not a valid e-mail address</p>");
+    }
+    else {
+     emailEntry.next("p").replaceWith("<p>E-mail address validated</p>");
+    }
+  });
+
 
 
 

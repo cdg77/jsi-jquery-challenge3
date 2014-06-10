@@ -1,0 +1,10 @@
+.submit {
+  background-color: blue;
+}
+
+input {
+  display: block;
+  width: 400px;
+  height: 32px;
+  margin: 10px;
+}
